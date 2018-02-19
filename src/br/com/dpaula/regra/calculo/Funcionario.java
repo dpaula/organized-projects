@@ -2,6 +2,12 @@ package br.com.dpaula.regra.calculo;
 
 import java.util.Calendar;
 
+/**
+ * Classe coesa
+ * 
+ * @author ferna
+ *
+ */
 public class Funcionario {
 
 	private int id;
@@ -48,6 +54,10 @@ public class Funcionario {
 
 	public void setSalarioBase(double salarioBase) {
 		this.salarioBase = salarioBase;
+	}
+
+	public double calculaSalario() {
+		return this.cargo.getRegra().calcula(this);
 	}
 
 }

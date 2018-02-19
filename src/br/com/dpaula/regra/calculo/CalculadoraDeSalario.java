@@ -10,7 +10,7 @@ package br.com.dpaula.regra.calculo;
 public class CalculadoraDeSalario {
 
 	public double calcula(Funcionario funcionario) {
-		return funcionario.getCargo().getRegra().calcula(funcionario);
+		return funcionario.calculaSalario();
 	}
 
 }

@@ -1,9 +1,14 @@
 package br.com.dpaula.notaFiscal;
 
+import java.util.List;
+
+import br.com.dpaula.faturaBoleto.Pagamento;
+
 public class Fatura {
 
 	private double valorMensal;
 	private String cliente;
+	private List<Pagamento> pagamentos;
 
 	public Fatura() {
 	}
@@ -27,6 +32,20 @@ public class Fatura {
 
 	public void setCliente(String cliente) {
 		this.cliente = cliente;
+	}
+
+	public double getValor() {
+		// TODO Auto-generated method stub
+		return 0;
+	}
+
+	public void setPago(boolean b) {
+		// TODO Auto-generated method stub
+
+	}
+
+	public List<Pagamento> getPagamentos() {
+		return this.pagamentos;
 	}
 
 }

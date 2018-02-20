@@ -9,6 +9,8 @@ public class Fatura {
 	private double valorMensal;
 	private String cliente;
 	private List<Pagamento> pagamentos;
+	private int valor;
+	private boolean pago;
 
 	public Fatura() {
 	}
@@ -46,6 +48,26 @@ public class Fatura {
 
 	public List<Pagamento> getPagamentos() {
 		return this.pagamentos;
+	}
+
+	public void adicionaPagamento(Pagamento pagamento) {
+
+		this.pagamentos.add(pagamento);
+
+		if (valorTotalDosPagamentos() >= this.valor) {
+			this.pago = true;
+		}
+
+	}
+
+	private double valorTotalDosPagamentos() {
+		double total = 0;
+
+		for (Pagamento p : pagamentos) {
+			total += p.getValor();
+		}
+
+		return total;
 	}
 
 }

@@ -6,4 +6,9 @@ public class Pagamento {
 		// TODO Auto-generated constructor stub
 	}
 
+	public double getValor() {
+		// TODO Auto-generated method stub
+		return 0;
+	}
+
 }
